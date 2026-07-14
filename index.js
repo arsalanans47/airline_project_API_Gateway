@@ -49,6 +49,10 @@ app.get("/home", (req, res) => {
   return res.json({ message: "OK" });
 });
 
+app.get("/health", (req, res) => {
+    res.status(200).send("OK");
+});
+
 app.listen(PORT, () => {
   console.log(`Server started at port ${PORT}`);
 });
